@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	const buttons = document.querySelectorAll('.btn-nav')
 
 	let currentBlockIndex = 0
+	let isScrolling = false
+	let startY = 0
 
 	// Функция для обновления классов кнопок
 	function updateButtons() {
@@ -27,22 +29,55 @@ document.addEventListener('DOMContentLoaded', function () {
 	main.addEventListener('wheel', function (event) {
 		event.preventDefault() // Отменить стандартное поведение прокрутки
 
-		if (event.deltaY > 0) {
-			// Прокрутка вниз
-			currentBlockIndex++
-		} else {
-			// Прокрутка вверх
-			currentBlockIndex--
+		if (!isScrolling) {
+			isScrolling = true
+
+			setTimeout(function () {
+				isScrolling = false
+			}, 1000) // Задержка между прокрутками
+
+			if (event.deltaY > 0) {
+				// Прокрутка вниз
+				if (currentBlockIndex < blocks.length - 1) {
+					currentBlockIndex++
+				}
+			} else {
+				// Прокрутка вверх
+				if (currentBlockIndex > 0) {
+					currentBlockIndex--
+				}
+			}
+
+			// Прокрутите к выбранному блоку
+			scrollToBlock(currentBlockIndex)
 		}
+	})
 
-		// Ограничьте индекс блока в пределах доступных блоков
-		currentBlockIndex = Math.min(
-			Math.max(currentBlockIndex, 0),
-			blocks.length - 1
-		)
+	// Обработчик события начала сенсорного взаимодействия (touchstart)
+	main.addEventListener('touchstart', function (event) {
+		startY = event.touches[0].clientY
+	})
 
-		// Прокрутите к выбранному блоку
-		scrollToBlock(currentBlockIndex)
+	// Обработчик события окончания сенсорного взаимодействия (touchend)
+	main.addEventListener('touchend', function (event) {
+		const endY = event.changedTouches[0].clientY
+		const deltaY = endY - startY
+
+		if (!isScrolling) {
+			isScrolling = true
+
+			setTimeout(function () {
+				isScrolling = false
+			}, 1000) // Задержка между прокрутками
+
+			if (deltaY > 50 && currentBlockIndex > 0) {
+				// Прокрутка вверх
+				scrollToBlock(currentBlockIndex - 1)
+			} else if (deltaY < -50 && currentBlockIndex < blocks.length - 1) {
+				// Прокрутка вниз
+				scrollToBlock(currentBlockIndex + 1)
+			}
+		}
 	})
 
 	// Добавьте обработчики событий для каждой кнопки
