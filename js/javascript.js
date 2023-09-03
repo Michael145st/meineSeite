@@ -75,15 +75,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			if (deltaY > 0 && currentBlockIndex > 0) {
 				// Прокрутка вверх
-				const scrollDistance = Math.min(blockHeight)
-				window.scrollBy(0, -scrollDistance +1)
+				const scrollDistance = Math.min(screenHeight, blockHeight)
+				window.scrollBy(0, -scrollDistance)
 			} else if (deltaY < 0 && currentBlockIndex < blocks.length - 1) {
 				// Прокрутка вниз
-				const scrollDistance = Math.min(blockHeight)
+				const scrollDistance = Math.min(screenHeight, blockHeight)
 				window.scrollBy(0, scrollDistance)
 			} else if (deltaY < 0 && currentBlockIndex === 0) {
 				// Прокрутка вверх от начала страницы
-				window.scrollTo(0, 0)
+				const scrollDistance = Math.min(screenHeight, blockHeight)
+				window.scrollBy(0, -scrollDistance)
 			}
 		}
 	})
