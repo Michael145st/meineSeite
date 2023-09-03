@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: cadetblue;
+    background-color: rgb(0, 0, 0);
 }
 
 header {
@@ -61,6 +61,7 @@ header {
 
 main {
     margin-left: 230px;
+    margin-right: 20px;
     background-color: rgba(37, 47, 47, 0.803);
     overflow-y: scroll;
     scroll-snap-type: y proximity;
@@ -69,18 +70,22 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 /* Стили для блоков */
 .block {
     height: 100vh;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+
     width: 100%;
-    background-color: rgba(186, 118, 17, 0);
+    background-color: rgba(85, 85, 85, 0.979);
     margin: 10px 0;
     box-sizing: border-box;
     box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.651);
-    border-radius: 15px;
-    border: 2px solid rgb(161, 35, 35);
+    border-radius: 25px;
+    border: 3px solid rgb(0, 0, 0);
     scroll-snap-align: start;
     text-align: center;
     padding: 20px;
@@ -126,7 +131,8 @@ a {
         margin-left: 0;
     }
 
-    .block {overflow: hidden; background-color: rgba(255, 0, 0, 0); margin: 0;
+    .block {overflow: hidden; background-color: rgba(255, 0, 0, 0); margin-top: 40vh;
+    margin-bottom: 40vh;
     }
     main, body  {overflow: hidden;}
 }
