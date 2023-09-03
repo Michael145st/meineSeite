@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	let currentBlockIndex = 0
 	let isScrolling = false
 	let startY = 0
+	let touchStartY = 0
+	let touchEndY = 0
 
 	// Функция для обновления классов кнопок
 	function updateButtons() {
@@ -55,13 +57,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Обработчик события начала сенсорного взаимодействия (touchstart)
 	main.addEventListener('touchstart', function (event) {
-		startY = event.touches[0].clientY
+		touchStartY = event.touches[0].clientY
 	})
 
 	// Обработчик события окончания сенсорного взаимодействия (touchend)
 	main.addEventListener('touchend', function (event) {
-		const endY = event.changedTouches[0].clientY
-		const deltaY = endY - startY
+		touchEndY = event.changedTouches[0].clientY
+		const swipeDistance = touchStartY - touchEndY
 
 		if (!isScrolling) {
 			isScrolling = true
@@ -73,18 +75,17 @@ document.addEventListener('DOMContentLoaded', function () {
 			const blockHeight = blocks[currentBlockIndex].offsetHeight
 			const screenHeight = window.innerHeight
 
-			if (deltaY > 0 && currentBlockIndex > 0) {
-				// Прокрутка вверх
-				const scrollDistance = Math.min(screenHeight, blockHeight)
-				window.scrollBy(0, -scrollDistance)
-			} else if (deltaY < 0 && currentBlockIndex < blocks.length - 1) {
-				// Прокрутка вниз
-				const scrollDistance = Math.min(screenHeight, blockHeight)
-				window.scrollBy(0, scrollDistance)
-			} else if (deltaY < 0 && currentBlockIndex === 0) {
-				// Прокрутка вверх от начала страницы
-				const scrollDistance = Math.min(screenHeight, blockHeight)
-				window.scrollBy(0, -scrollDistance)
+			if (swipeDistance > 100 && currentBlockIndex > 0) {
+				// Свайп вверх
+				currentBlockIndex--
+				scrollToBlock(currentBlockIndex)
+			} else if (
+				swipeDistance < -100 &&
+				currentBlockIndex < blocks.length - 1
+			) {
+				// Свайп вниз
+				currentBlockIndex++
+				scrollToBlock(currentBlockIndex)
 			}
 		}
 	})
