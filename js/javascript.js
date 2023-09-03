@@ -70,12 +70,17 @@ document.addEventListener('DOMContentLoaded', function () {
 				isScrolling = false
 			}, 1000) // Задержка между прокрутками
 
+			const blockHeight = blocks[currentBlockIndex].offsetHeight
+			const screenHeight = window.innerHeight
+
 			if (deltaY > 0 && currentBlockIndex > 0) {
 				// Прокрутка вверх
-				scrollToBlock(currentBlockIndex - 1)
+				const scrollDistance = Math.min(screenHeight, blockHeight)
+				window.scrollBy(0, -scrollDistance)
 			} else if (deltaY < 0 && currentBlockIndex < blocks.length - 1) {
 				// Прокрутка вниз
-				scrollToBlock(currentBlockIndex + 1)
+				const scrollDistance = Math.min(screenHeight, blockHeight)
+				window.scrollBy(0, scrollDistance)
 			}
 		}
 	})
