@@ -81,6 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
 				// Прокрутка вниз
 				const scrollDistance = Math.min(screenHeight, blockHeight)
 				window.scrollBy(0, scrollDistance)
+			} else if (deltaY < 0 && currentBlockIndex === 0) {
+				// Прокрутка вверх от начала страницы
+				window.scrollTo(0, 0)
 			}
 		}
 	})
