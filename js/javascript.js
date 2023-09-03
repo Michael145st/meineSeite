@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Обработчик события окончания сенсорного взаимодействия (touchend)
 	main.addEventListener('touchend', function (event) {
 		touchEndY = event.changedTouches[0].clientY
-		const swipeDistance = touchStartY - touchEndY
+		const swipeDistance = touchEndY - touchStartY
 
 		if (!isScrolling) {
 			isScrolling = true
