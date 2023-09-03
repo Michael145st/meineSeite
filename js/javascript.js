@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	const buttons = document.querySelectorAll('.btn-nav')
 
 	let currentBlockIndex = 0
-	let isScrolling = false
 	let startY = 0
+	let endY = 0
 	let touchStartY = 0
 	let touchEndY = 0
 
@@ -31,28 +31,20 @@ document.addEventListener('DOMContentLoaded', function () {
 	main.addEventListener('wheel', function (event) {
 		event.preventDefault() // Отменить стандартное поведение прокрутки
 
-		if (!isScrolling) {
-			isScrolling = true
-
-			setTimeout(function () {
-				isScrolling = false
-			}, 1000) // Задержка между прокрутками
-
-			if (event.deltaY > 0) {
-				// Прокрутка вниз
-				if (currentBlockIndex < blocks.length - 1) {
-					currentBlockIndex++
-				}
-			} else {
-				// Прокрутка вверх
-				if (currentBlockIndex > 0) {
-					currentBlockIndex--
-				}
+		if (event.deltaY > 0) {
+			// Прокрутка вниз
+			if (currentBlockIndex < blocks.length - 1) {
+				currentBlockIndex++
 			}
-
-			// Прокрутите к выбранному блоку
-			scrollToBlock(currentBlockIndex)
+		} else {
+			// Прокрутка вверх
+			if (currentBlockIndex > 0) {
+				currentBlockIndex--
+			}
 		}
+
+		// Прокрутите к выбранному блоку
+		scrollToBlock(currentBlockIndex)
 	})
 
 	// Обработчик события начала сенсорного взаимодействия (touchstart)
@@ -65,25 +57,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		touchEndY = event.changedTouches[0].clientY
 		const swipeDistance = touchStartY - touchEndY
 
-		if (!isScrolling) {
-			isScrolling = true
-
-			setTimeout(function () {
-				isScrolling = false
-			}, 1000) // Задержка между прокрутками
-
-			const blockHeight = blocks[currentBlockIndex].offsetHeight
-			const screenHeight = window.innerHeight
-
-			if (swipeDistance > 50 && currentBlockIndex > 0) {
-				// Свайп вверх
-				currentBlockIndex--
-				scrollToBlock(currentBlockIndex)
-			} else if (swipeDistance < -50 && currentBlockIndex < blocks.length - 1) {
-				// Свайп вниз
-				currentBlockIndex++
-				scrollToBlock(currentBlockIndex)
-			}
+		if (swipeDistance > 50 && currentBlockIndex > 0) {
+			// Свайп вверх
+			currentBlockIndex--
+			scrollToBlock(currentBlockIndex)
+		} else if (swipeDistance < -50 && currentBlockIndex < blocks.length - 1) {
+			// Свайп вниз
+			currentBlockIndex++
+			scrollToBlock(currentBlockIndex)
 		}
 	})
 
