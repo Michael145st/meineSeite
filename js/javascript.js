@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Обработчик события окончания сенсорного взаимодействия (touchend)
 	main.addEventListener('touchend', function (event) {
 		touchEndY = event.changedTouches[0].clientY
-		const swipeDistance = touchEndY - touchStartY
+		const swipeDistance = touchStartY - touchEndY
 
 		if (!isScrolling) {
 			isScrolling = true
@@ -75,14 +75,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			const blockHeight = blocks[currentBlockIndex].offsetHeight
 			const screenHeight = window.innerHeight
 
-			if (swipeDistance > 100 && currentBlockIndex > 0) {
+			if (swipeDistance > 50 && currentBlockIndex > 0) {
 				// Свайп вверх
 				currentBlockIndex--
 				scrollToBlock(currentBlockIndex)
-			} else if (
-				swipeDistance < -100 &&
-				currentBlockIndex < blocks.length - 1
-			) {
+			} else if (swipeDistance < -50 && currentBlockIndex < blocks.length - 1) {
 				// Свайп вниз
 				currentBlockIndex++
 				scrollToBlock(currentBlockIndex)
