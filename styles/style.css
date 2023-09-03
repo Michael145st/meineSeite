@@ -128,5 +128,5 @@ a {
 
     .block {overflow: hidden; background-color: rgba(255, 0, 0, 0);
     }
-    main, body  {overflow: hidden;}
+    main, body, html  {overflow: hidden;}
 }
