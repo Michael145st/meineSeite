@@ -70,10 +70,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				isScrolling = false
 			}, 1000) // Задержка между прокрутками
 
-			if (deltaY > 50 && currentBlockIndex > 0) {
+			if (deltaY > 0 && currentBlockIndex > 0) {
 				// Прокрутка вверх
 				scrollToBlock(currentBlockIndex - 1)
-			} else if (deltaY < -50 && currentBlockIndex < blocks.length - 1) {
+			} else if (deltaY < 0 && currentBlockIndex < blocks.length - 1) {
 				// Прокрутка вниз
 				scrollToBlock(currentBlockIndex + 1)
 			}
