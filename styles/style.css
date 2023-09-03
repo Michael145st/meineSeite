@@ -126,7 +126,7 @@ a {
         margin-left: 0;
     }
 
-    .block {overflow: hidden; background-color: rgba(255, 0, 0, 0);
+    .block {overflow: hidden; background-color: rgba(255, 0, 0, 0); margin: 0;
     }
     main, body, html  {overflow: hidden;}
 }
