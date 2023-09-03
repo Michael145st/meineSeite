@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let endY = 0
 	let touchStartY = 0
 	let touchEndY = 0
-	const minSwipeDistance = 50 // Увеличенное значение для более чувствительных свайпов
+	const minSwipeDistance = 0.5 // Увеличенное значение для более чувствительных свайпов
 
 	// Функция для обновления классов кнопок
 	function updateButtons() {
