@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let endY = 0
 	let touchStartY = 0
 	let touchEndY = 0
+	const minSwipeDistance = 50 // Увеличенное значение для более чувствительных свайпов
 
 	// Функция для обновления классов кнопок
 	function updateButtons() {
@@ -57,11 +58,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		touchEndY = event.changedTouches[0].clientY
 		const swipeDistance = touchStartY - touchEndY
 
-		if (swipeDistance > 50 && currentBlockIndex > 0) {
+		if (swipeDistance > minSwipeDistance && currentBlockIndex > 0) {
 			// Свайп вверх
 			currentBlockIndex--
 			scrollToBlock(currentBlockIndex)
-		} else if (swipeDistance < -50 && currentBlockIndex < blocks.length - 1) {
+		} else if (
+			swipeDistance < -minSwipeDistance &&
+			currentBlockIndex < blocks.length - 1
+		) {
 			// Свайп вниз
 			currentBlockIndex++
 			scrollToBlock(currentBlockIndex)
