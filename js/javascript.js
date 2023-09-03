@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			if (deltaY > 0 && currentBlockIndex > 0) {
 				// Прокрутка вверх
-				const scrollDistance = Math.min(screenHeight, blockHeight +1)
+				const scrollDistance = Math.min(screenHeight, blockHeight)
 				window.scrollBy(0, -scrollDistance)
 			} else if (deltaY < 0 && currentBlockIndex < blocks.length - 1) {
 				// Прокрутка вниз
