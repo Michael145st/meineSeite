@@ -5,17 +5,35 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    width: 100dvw;
+    left: 0;
+    overflow-x: hidden;
 }
 
 header {
-    width: 230px;
+    width: 8dvw;
+    min-width: 230px;
     position: fixed;
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(20, 20, 20);
     display: flex;
     flex-direction: column;
     align-items: center;
     top: 0;
     height: 100%;
+    justify-items: center;
+    align-items: center;
+    
+    border-color: red;
+    border: solid;
+    justify-content: space-between;
+    overflow: hidden;
+    
+    overflow-y: hidden;
+   
+    
+    
+    
 }
 
 .portrait {
@@ -28,14 +46,15 @@ header {
 .name {
     font-size: 26px;
     font-weight: 600;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
-    margin-bottom: 40px;
+ 
     margin-top: 10px;
 }
+.unten {font-size: 15px; color: rgba(135, 135, 135, 0.785);}
 
 .logo {
-    margin-top: 30px;
+   margin-top: 2dvw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,63 +64,94 @@ header {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-top: -30%;
+  
+      
 }
 
 .btn-nav {
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(20, 20, 20);
     border: none;
     padding: 15px;
-    color: white;
+    padding-right: 65px;
+    padding-left: 65px;
+    width: 100%;
+    color: rgba(177, 35, 35, 0.396);
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     font-weight: 800;
     text-align: center;
     cursor: pointer;
+    border-color: red;
+    
 }
 
 main {
     margin-left: 230px;
-    margin-right: 20px;
-    background-color: rgba(37, 47, 47, 0.803);
-    overflow-y: scroll;
+   
+    background-color: rgba(43, 42, 42, 0.512);
+   overflow-x: hidden;
     scroll-snap-type: y proximity;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
     
 }
 
 /* Стили для блоков */
 .block {
-    height: 100vh;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
+    height: 100dvh;
+   
 
     width: 100%;
-    background-color: rgba(85, 85, 85, 0.979);
-    margin: 10px 0;
-    box-sizing: border-box;
-    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.651);
-    border-radius: 25px;
-    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(51, 51, 51, 0);
+
+    border: 0.2dvw solid rgb(0, 0, 0);
+    border-radius: 1dvw;
     scroll-snap-align: start;
     text-align: center;
-    padding: 20px;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
     justify-content: space-evenly;
+    overflow-x: hidden;
 }
 
 
+.card1-container {height: 90dvh;
+    
+
+    width: 92%; border-radius: 4dvw;
+    background-color: rgb(0, 0, 0);
+
+    border: 10px solid rgb(0, 0, 0);
+    scroll-snap-align: start;
+    text-align: center;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: space-evenly;
+    overflow-x: hidden;}
 
 .red {
     color: red;
     font-size: 24px;
     margin-bottom: 10px;
+}
+
+.title-b {
+    font-size: 5dvw;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+    color: rgb(177, 35, 35);
 }
 
 .title {
@@ -116,7 +166,7 @@ main {
 }
 
 .selected {
-    color: rgb(177, 35, 35);
+    color: rgb(0, 0, 0); background-color: rgb(177, 35, 35);
 }
 
 a {
@@ -134,5 +184,403 @@ a {
     .block {overflow: hidden; background-color: rgba(255, 0, 0, 0); margin-top: 40vh;
     margin-bottom: 40vh;
     }
-    main, body  {overflow: hidden;}
+     main  {overflow: hidden;}
 }
+
+.card1 {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    background-color: rgba(253, 3, 3, 0.745);
+    border-radius: 25px;
+    align-items: center;
+    align-content: center;
+    
+}
+.card {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    background-color: rgba(253, 3, 3, 0.745);
+    border-radius: 25px;
+    
+}
+
+.about {text-align: left; font-size: 1dvw; max-width: 30dvw;} 
+.skill {color: white; max-width: 15dvw; margin-left: 0;white-space: nowrap;}
+.skill + .skill {margin-left: 20%;}
+.skill-container {
+    display: none; margin-top: -2%; left: 0; width: min-content; justify-content: center; position: static; width: 80%; align-content: space-between; padding-left: 15%; padding-right: 15%;
+    
+}
+
+.skills {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    border-width: 3px;
+    border-color:  rgb(177, 35, 35);
+    border-width: 0.5dvw;
+    color: white;
+    padding: 4%;
+    font-size: 1.5dvw;
+    margin-top: 4%;
+    border: solid;
+    border-color:  rgb(177, 35, 35);
+    border-width: 0.5dvw;
+    font-size: ;
+    margin-left: -55%;
+    
+    
+}
+
+.skills:hover { background-color: rgba(43, 42, 42, 0);
+  color: rgb(177, 35, 35);  transition: transform 0.4s, background-color 0.01s, color 0.3s; transform: scale(1.1);}
+.textabout {
+    max-width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: flex-start;
+
+text-align: left;
+    
+}
+
+.skill-bar {width: 15dvw;}
+
+.fotos { flex-wrap: nowrap; 
+   
+}
+.foto1 {width: 35vw; border-radius: 10px;}
+.foto2 {width: 15vw; margin-bottom: -10%; margin-left: -70%; border-radius: 10px;}
+.aboutme {display: flex; flex-direction: row;}
+.service-container {
+    display: flex;
+    max-width: 90%;
+    
+}
+.textservice {margin-top: -1%; margin-bottom: -0.5%;}
+.service-icon { width: 10dvw;}
+.service-description {font-size: 1dvw; color: rgba(255, 255, 255, 0.719); max-width: 90%; line-height: 1.3;}
+.service-title {font-size: 1.8dvw; line-height: 0.5dvh;}
+.d-sev {margin-top: 4%; margin-bottom: 4.5%; font-size: 1.5dvw; max-width: 90%; text-align: center; margin-left: 5%;margin-right: 5%;}
+.b3 {justify-content: center; display: flex; margin: 0; padding: ;}
+.service-card {align-content: center; justify-content: center; align-items: center; justify-items: center; display: flex; flex-direction: column;}
+.service-card + .service-card {margin-left: 5%;}
+
+
+
+
+.slider-outer-container {
+    display: flex;
+    overflow: hidden;
+    width: 150%;
+    justify-content: center;
+}
+
+.slider-container {
+    display: flex;
+    width: max-content;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+.portfolio-card {
+    flex-shrink: 0;
+    width: 30%;
+    height: 100%;
+    margin: 0 2%;
+    background-color: rgba(51, 51, 51, 0.8);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transform: scale(0.9);
+    opacity: 0.7;
+}
+
+.portfolio-card.active {
+    transform: scale(1);
+    z-index: 2;
+    opacity: 1;
+}
+
+.portfolio-card:nth-child(1) {
+    background-image: url('your-image-1.jpg');
+}
+
+.portfolio-card:nth-child(2) {
+    background-image: url(../img/o1.jpg);
+}
+
+.portfolio-card:nth-child(3) {
+    background-image: url('your-image-3.jpg');
+}
+
+
+
+
+
+/* Ваши текущие стили */
+
+ .b5 .slider-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .b5 .prev-button,
+        .b5 .next-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .b5 .slider {
+            display: flex;
+            overflow: hidden;
+            width: 70dvw; /* Ширина видимой области слайдера (2 элемента видны + 30% соседних) */
+            border: 1px solid #ddd;
+            align-items: s;
+            padding-left: -40%;
+        }
+
+        .b5 .slider-item  {
+            flex: 0 0 calc(42% - 10px); /* Ширина каждого элемента (30% от контейнера) с отступом */
+            margin: 5px; /* Отступ между элементами */
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            min-height: 100px;
+            margin-right: 2.5dvw; 
+            margin-left: 2.5dvw;
+            min-width: 35dvw;
+            width: 35dvw;
+            height: 30dvh; /* Минимальная высота элемента для правильного выравнивания */
+        }
+
+
+        .container {
+    text-align: center;
+    background-color: #ffffff00;
+    padding: 2%;
+    border-radius: 9%;
+  
+    width: 68%;
+    margin: 0 auto;
+    margin-left: 0%;
+border-radius: 3%;background-image: url(../img/mat.jpg); background-size: cover;
+margin-top: -8%;
+margin-left: 5%;
+padding-right: -8%;
+   
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 70dvh; /* Высоту можно устанавливать по вашему выбору */
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2%;
+   
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 2%; overflow: hidden; 
+    
+    
+}
+
+#resizeHandle {
+    position: absolute;
+    top: 0;
+    right: -0%;
+    width: 2dvw;
+    height: 100%;
+    background-color: #ffffff00;
+    cursor: col-resize;
+    z-index: 1;
+    margin-right: -0.9dvw;
+    padding: 0;
+    background-image: url(../img/scr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.portfolio {
+ font-size: 5dvw; margin-left: -55%;
+ line-height: 1.4; color: rgb(177, 35, 35); margin-top: -2%;
+
+}
+
+h3 {color: #000;
+-moz-user-select: -moz-none;
+-o-user-select: none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+user-select: none;}
+
+
+.buttons-por {
+    position: absolute; right: 2dvw; margin-top: 60dvh;
+    display: flex;
+width: 13dvw;
+height: 6dvw;
+flex-direction: row;
+justify-content: space-between;
+}
+.portfolio-nav {height: 6dvw; width: 6dvw; border-radius: 60%; background-color: #8e0606; font-size: 4dvh; border:solid; border-width: 0.5dvw; border-color: #8e0606; background-color: #000; color: #ffffff; font-weight: 1dvw; line-height: 0;}
+
+.raaa { font-size: 3dvw; left: 0;padding-left: 350px; margin-left: 25dvw; color: #ffffff; position: absolute; text-align: left;}
+
+
+.daaa{
+    font-size: 1dvw; left: 0; padding-left: 350px; margin-left: 25dvw; color: #ffffffbb; position: absolute; text-align: left;  margin-top: 15dvw; 
+}
+.info { position: absolute; right: 3dvw; margin-top: 6dvh; border-radius: 10%; line-height: normal;
+    display: flex;
+width: 13dvw;
+height: 6dvw;
+flex-direction: row;
+justify-content: space-around; font-size: 4dvw; background-color: #8e0606; color: rgb(43, 42, 42, 0.512); border: none;} 
+
+
+.project-name {position: absolute; right: 0.5dvw; margin-top:-5dvh; white-space: nowrap; font-size: 1.5dvw;
+    display: flex;
+width: 16dvw;
+margin-top: -6dvw;
+flex-direction: row;
+justify-content: space-around; text-align: center;  align-content: center; }
+.git {position: absolute; right: 3dvw; margin-top: 33dvh;  line-height: normal
+    display: flex;
+width: 13dvw;
+height: 3.5dvw;
+flex-direction: row; border-radius: 5%;
+justify-content: space-around; color: #ffffffbb; background-color: black;  border: solid #8e0606 0.5dvw; font-size: 0.5dvw }
+
+.project-number {position: absolute; right: 2.3dvw; margin-top:-30dvh; padding-bottom:15px;
+    display: flex;
+width: 12dvw;
+height: 6dvw;
+flex-direction: row;
+justify-content: space-around; text-align: center;  align-content: center; font-size: 8dvw; color: #ffffffbb; }
+
+.card2 {background-color: #561e1e;}
+
+.input-container { height: 10dvw; display: flex; justify-content: space-evenly; width: 100%; padding-left: 10%; padding-right: 10%; margin-top: -1dvw; }
+.small-container {display: flex; height: 10dvw; flex-direction: column; justify-content: space-between; width: 34dvw;}
+.big {width: 34dvw;}
+
+.contact-container {display: flex; width: 100%; justify-content: space-around; margin-bottom: 1%; margin-top: 3%;}
+.contact img {width: 6dvw; }
+.home1 {max-width: 4dvw;}
+.bigcon {margin-top: -10%;}
+
+.contact {width: 20dvw; flex-direction: column-reverse;}
+
+input {border-radius: 8px; border: solid; border-color: rgb(177, 35, 35);border-width: 0; border-bottom-width: 0.55dvw; background-color: rgba(0, 0, 0, 0); color: rgb(177, 35, 35); font-size: 1.3dvw; padding: 0.3dvw;}
+
+@media screen and (min-width: 2000px) {.raaa .daaa {margin-left: 0dvw;}}
+
+
+/* Стили для .info */
+.info {
+  position: absolute;
+  right: 2dvw;
+  margin-top: 6vh;
+  border-radius: 10%;
+  line-height: normal;
+  display: flex;
+  width: 13vw;
+  height: 6vw;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 4vw;
+  background-color: #8e0606;
+  color: #000000;
+  border: none;
+  transition: background-color 0.3s, color 0.3s; /* Плавная анимация изменения цветов */
+}
+
+.info:hover {
+  background-color: rgba(43, 42, 42, 0.512);
+  color: rgb(177, 35, 35);  transition: transform 0.4s, background-color 0.01s, color 0.3s; transform: scale(1.1);
+}
+
+/* Стили для .git */
+.git {
+  position: absolute;
+  right: 2vw;
+  margin-top: 33vh;
+  line-height: normal;
+  display: flex;
+  width: 13vw;
+  height: 3.5vw;
+  flex-direction: row;
+  border-radius: 5%;
+ align-content: center;
+  color: #ffffff76;
+  background-color: rgba(43, 42, 42, 0);
+  border: solid #8e0606 0.5vw;
+  font-size: 0.5vw;
+  transition: background-color 0.3s, color 0.3s; /* Плавная анимация изменения цветов */
+}
+
+.git:hover {
+  background-color: #8e0606;
+  color: #ffffff;
+}
+
+/* Стили для .portfolio-nav */
+.portfolio-nav {
+
+  transition: transform 0.1s, background-color 0.1s, color 0.3s; color: #ff0000; background-color: rgba(43, 42, 42, 0);/* Плавные анимации */
+}
+
+.portfolio-nav:hover {
+  background-color: rgb(136, 22, 22);
+  color: #ffffff;
+  transform: scale(1.1); /* Увеличение размера при наведении */
+}
+
+.mana { background-color: rgba(43, 42, 42, 0.821);
+  color: rgb(177, 35, 35); transition: transform 0.4s,}
+
+  .interface {display: flex; flex-direction: column; min-height: min-content; margin-left: 2dvw;}
+
+  .big {border-width: 0.55dvw; border-bottom-width: 0.55dvw ;}
+
+  .conta { margin-top: 2dvw;}
+  .contac {margin-top: 0.1dvw; margin-bottom: 1.5dvw; }
+  .contact {font-size: 1dvw;}
+  .send {width: 10dvw;margin-top: 2dvw; background-color: inherit; font-size: 3vw; border: none; color: rgb(177, 35, 35);}
+ .contact h3 {color: rgb(177, 35, 35); font-size: 1dvw; margin-top: -4dvw; line-height: 0;}
+ .send:hover {transform: scale(1.2);}
+ ::placeholder {color: rgba(177, 35, 35, 0.618);}
+.block[data-index="6"] {
+    height: 30%; background-color: rgb(177, 35, 35); align-content: flex-start;
+    /* Другие стили вашего блока */
+}
+.btn-nav[data-target="6"]  h1 {background-color: #00000000; color: #ffffff;}

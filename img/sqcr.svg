@@ -1,0 +1,14 @@
+<svg width="16" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="18" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text stroke="#000" font-style="italic" font-weight="bold" transform="rotate(-90 5.322096824646025,200.17141723632815) matrix(1,0,0,0.7284178362795329,-1.6242480278015137,53.22326946725962) " xml:space="preserve" text-anchor="start" font-family="Arvo, sans-serif" font-size="13" id="svg_1" y="206.308478" x="-143.621409" stroke-width="0" fill="#000000">DRAG TO THE RIGHT TO CHANGE THE SIZE</text>
+ </g>
+</svg>
