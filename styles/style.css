@@ -508,27 +508,37 @@ input {border-radius: 8px; border: solid; border-color: rgb(177, 35, 35);border-
 
 /* Стили для .info */
 .info {
-  position: absolute;
-  right: 2dvw;
-  margin-top: 6vh;
-  border-radius: 10%;
-  line-height: normal;
-  display: flex;
-  width: 13vw;
-  height: 6vw;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: 4vw;
-  background-color: #8e0606;
-  color: #000000;
-  border: none;
-  transition: background-color 0.3s, color 0.3s; /* Плавная анимация изменения цветов */
+    position: absolute;
+    right: 2dvw;
+    margin-top: 6vh;
+    border-radius: 10%;
+    line-height: normal;
+    display: flex;
+    width: 13vw;
+    height: 6vw;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 4vw;
+    background-color: #8e0606;
+    color: #000000;
+    border: none;
+    transition: transform 0.4s, background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Плавная анимация изменения цветов и тени */
 }
 
 .info:hover {
-  background-color: rgba(43, 42, 42, 0.512);
-  color: rgb(177, 35, 35);  transition: transform 0.4s, background-color 0.01s, color 0.3s; transform: scale(1.1);
+    background-color: rgba(43, 42, 42, 0.512);
+    color: rgb(177, 35, 35);
+    transform: scale(1.1);
+    box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
 }
+
+.info:active {
+    background-color: rgba(43, 42, 42, 0.512);
+    color: rgb(177, 35, 35);
+    transform: scale(1.1);
+    box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
+}
+
 
 /* Стили для .git */
 .git {
@@ -566,7 +576,7 @@ input {border-radius: 8px; border: solid; border-color: rgb(177, 35, 35);border-
   transform: scale(1.1); /* Увеличение размера при наведении */
 }
 
-.mana { background-color: rgba(43, 42, 42, 0.821);
+.mana { background-color: rgba(43, 42, 42, 0.821);box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
   color: rgb(177, 35, 35); transition: transform 0.4s,}
 
   .interface {display: flex; flex-direction: column; min-height: min-content; margin-left: 2dvw;}
@@ -578,7 +588,7 @@ input {border-radius: 8px; border: solid; border-color: rgb(177, 35, 35);border-
   .contact {font-size: 1dvw;}
   .send {width: 10dvw;margin-top: 2dvw; background-color: inherit; font-size: 3vw; border: none; color: rgb(177, 35, 35);}
  .contact h3 {color: rgb(177, 35, 35); font-size: 1dvw; margin-top: -4dvw; line-height: 0;}
- .send:hover {transform: scale(1.2);}
+ .send:hover {transform: scale(1.2); color: rgb(219, 44, 44);}
  ::placeholder {color: rgba(177, 35, 35, 0.618);}
 .block[data-index="6"] {
     height: 30%; background-color: rgb(177, 35, 35); align-content: flex-start;
@@ -598,4 +608,46 @@ input {border-radius: 8px; border: solid; border-color: rgb(177, 35, 35);border-
 }
 
 
+.info {
+    position: absolute;
+    right: 2dvw;
+    margin-top: 6vh;
+    border-radius: 10%;
+    line-height: normal;
+    display: flex;
+    width: 13vw;
+    height: 6vw;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 4vw;
+    background-color: #8e0606;
+    color: #000000;
+    border: none;
+    transition: transform 0.4s, background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Плавная анимация изменения цветов и тени */
+}
 
+.info:hover {
+    background-color: rgba(43, 42, 42, 0.512);
+    color: rgb(177, 35, 35);
+    transform: scale(1.1);
+    box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
+}
+
+.info.mana {
+    background-color: rgba(43, 42, 42, 0.512);
+    color: rgb(177, 35, 35);
+    transform: scale(1.1);
+    box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Анимация для состояния с классом .mana */
+}
+
+.info:active {
+    background-color: rgba(43, 42, 42, 0.512);
+    color: rgb(177, 35, 35);
+    transform: scale(1.1);
+    box-shadow: 0px 14px 0px 0px rgba(201, 4, 4, 0.364);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Плавная анимация для активного состояния */
+}
+.portfolio-nav:active { transform: scale(1.3);
+   
+    transition: background-color 1s, color 1s, transform 1s, box-shadow 0s;}
