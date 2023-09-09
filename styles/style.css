@@ -83,7 +83,7 @@ header {
     text-align: left;
     cursor: pointer;
     border-color: red; 
-    align-content: center;
+    align-content: center; border-radius: 5px;
     
 }
 
