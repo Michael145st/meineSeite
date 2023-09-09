@@ -64,7 +64,7 @@ header {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin-top: -30%;
+    margin-top: -0%;
   
       
 }
@@ -73,16 +73,17 @@ header {
     background-color: rgb(20, 20, 20);
     border: none;
     padding: 15px;
-    padding-right: 65px;
-    padding-left: 65px;
+    padding-right: 105px;
+    padding-left: 25px;
     width: 100%;
     color: rgba(177, 35, 35, 0.396);
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     font-weight: 800;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
-    border-color: red;
+    border-color: red; 
+    align-content: center;
     
 }
 
@@ -229,7 +230,7 @@ a {
     border: solid;
     border-color:  rgb(177, 35, 35);
     border-width: 0.5dvw;
-    font-size: ;
+    
     margin-left: -55%;
     
     
@@ -269,7 +270,7 @@ text-align: left;
 .service-description {font-size: 1dvw; color: rgba(255, 255, 255, 0.719); max-width: 90%; line-height: 1.3;}
 .service-title {font-size: 1.8dvw; line-height: 0.5dvh;}
 .d-sev {margin-top: 4%; margin-bottom: 4.5%; font-size: 1.5dvw; max-width: 90%; text-align: center; margin-left: 5%;margin-right: 5%;}
-.b3 {justify-content: center; display: flex; margin: 0; padding: ;}
+.b3 {justify-content: center; display: flex; margin: 0; }
 .service-card {align-content: center; justify-content: center; align-items: center; justify-items: center; display: flex; flex-direction: column;}
 .service-card + .service-card {margin-left: 5%;}
 
@@ -377,14 +378,14 @@ text-align: left;
 
         .container {
     text-align: center;
-    background-color: #ffffff00;
+    background-color: #000000;
     padding: 2%;
     border-radius: 9%;
   
     width: 68%;
     margin: 0 auto;
     margin-left: 0%;
-border-radius: 3%;background-image: url(../img/mat.jpg); background-size: cover;
+border-radius: 3%;; background-size: cover;
 margin-top: -8%;
 margin-left: 5%;
 padding-right: -8%;
@@ -584,3 +585,17 @@ input {border-radius: 8px; border: solid; border-color: rgb(177, 35, 35);border-
     /* Другие стили вашего блока */
 }
 .btn-nav[data-target="6"]  h1 {background-color: #00000000; color: #ffffff;}
+
+#resizeHandle:hover {
+    /* Ваши текущие стили для ресайзера */
+    transform: scale(1.2) translateZ(20px); background-color: rgba(177, 35, 35, 0.312);
+}
+
+ .selected, .mana a {
+    transform: translateX(35px) scale(1.2); 
+     transition: background-color 0.3s, color 0.5s; margin: 7%; box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364); margin-bottom: 9%;
+    /* Другие стили для выделения активной кнопки */
+}
+
+
+
