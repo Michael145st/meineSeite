@@ -1,6 +1,6 @@
-/* Ваши стили здесь */
 
-body {
+
+body { 
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -8,14 +8,14 @@ body {
     overflow-x: hidden;
     width: 100dvw;
     left: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; margin-top: 0; padding-top: 0; overflow: hidden;
 }
 
-header {
+header {z-index: +100;
     width: 8dvw;
     min-width: 230px;
     position: fixed;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,6 +58,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
 
 .nav {
@@ -70,7 +71,7 @@ header {
 }
 
 .btn-nav {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(0, 0, 0);
     border: none;
     padding: 15px;
     padding-right: 105px;
@@ -83,14 +84,14 @@ header {
     text-align: left;
     cursor: pointer;
     border-color: red; 
-    align-content: center; border-radius: 5px;
+    align-content: center; border-radius: 5px; white-space: nowrap;
     
 }
 
 main {
     margin-left: 230px;
-   
-    background-color: rgba(43, 42, 42, 0.512);
+   margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.471);
    overflow-x: hidden;
     scroll-snap-type: y proximity;
     padding: 0;
@@ -98,7 +99,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden;
+    overflow-x: hidden; background-image: url(../img/bb.svg); background-attachment: fixed;
     
 }
 
@@ -106,22 +107,29 @@ main {
 .block {
     height: 100dvh;
    
+background-image: url(../img/b.svg); background-position: center; background-size: cover; background-attachment: ;
+ 
+    width: 80dvw;
+    background-color: rgba(0, 0, 0, 0.3);
 
-    width: 100%;
-    background-color: rgba(51, 51, 51, 0);
-
-    border: 0.2dvw solid rgb(0, 0, 0);
-    border-radius: 1dvw;
+    border: 0.5dvw solid rgba(80, 18, 18, 0.866);
+    border-radius: 2dvw;
     scroll-snap-align: start;
     text-align: center;
-   
+   padding-left: 2dvw;
+   padding-right: 1dvw;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
     justify-content: space-evenly;
     overflow-x: hidden;
+   transform: scale(0.92) translateY(2dvh );
+    box-shadow: -32px 10px 0px 0px rgba(35, 3, 3, 0.673);
+    margin-bottom: 2dvw;
+    margin-left: 1dvw; margin-top: -1.7%; transition: transform 0.3s ease,  border 0.3s  ease; 
 }
+
 
 
 .card1-container {height: 90dvh;
@@ -153,6 +161,17 @@ main {
     line-height: 1;
     margin: 0;
     color: rgb(177, 35, 35);
+    
+ text-shadow:  -5px 5px 0px rgba(125, 26, 26, 0.334),
+
+                 -7.5px 7.5px 0px rgba(86, 17, 17, 0.23),
+
+                 -10px 10px 15px rgba(30, 4, 4, 0.778);
+
+
+
+
+
 }
 
 .title {
@@ -167,7 +186,7 @@ main {
 }
 
 .selected {
-    color: rgb(0, 0, 0); background-color: rgb(177, 35, 35);
+    color: rgb(255, 255, 255); background-color: rgb(177, 35, 35);
 }
 
 a {
@@ -192,7 +211,7 @@ a {
     display: flex;
     width: 90%;
     height: 90%;
-    margin: 5%;
+    margin: 15%;
     background-color: rgba(253, 3, 3, 0.745);
     border-radius: 25px;
     align-items: center;
@@ -209,60 +228,63 @@ a {
     
 }
 
-.about {text-align: left; font-size: 1dvw; max-width: 30dvw;} 
-.skill {color: white; max-width: 15dvw; margin-left: 0;white-space: nowrap;}
+.about {text-align: center; font-size: 1dvw; max-width: 35dvw;} 
+.skill {color: white; max-width: 15dvw; margin-left: 0;white-space: nowrap; font-size: 0.7dvw; color: rgba(255, 255, 255, 0.744); filter: brightness(1.3);}
 .skill + .skill {margin-left: 20%;}
 .skill-container {
-    display: none; margin-top: -2%; left: 0; width: min-content; justify-content: center; position: static; width: 80%; align-content: space-between; padding-left: 15%; padding-right: 15%;
+    display: none; margin-top: 40%; margin-bottom: -5%;  width: min-content; justify-content: center; position: absolute; width: 80%; align-content: space-between;  contain: layout;
     
 }
+
 
 .skills {
     background-color: rgba(0, 0, 0, 0);
     border-radius: 10px;
-    border-width: 3px;
-    border-color:  rgb(177, 35, 35);
-    border-width: 0.5dvw;
-    color: white;
+    
+   
+border-width: 0;
+    color: rgb(255, 255, 255);
     padding: 4%;
     font-size: 1.5dvw;
-    margin-top: 4%;
-    border: solid;
-    border-color:  rgb(177, 35, 35);
-    border-width: 0.5dvw;
+    margin-top: 20%;
     
-    margin-left: -55%;
+    
+    
+    
+    margin-left: -50dvw;
     
     
 }
 
+
 .skills:hover { background-color: rgba(43, 42, 42, 0);
-  color: rgb(177, 35, 35);  transition: transform 0.4s, background-color 0.01s, color 0.3s; transform: scale(1.1);}
+  color: rgb(255, 255, 255);  transition: transform 0.2s, background-color 0.2s, color 0.2s; }
 .textabout {
     max-width: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
+   
+    margin-right: 8%;
     justify-content: left;
     display: flex;
     flex-direction: column;
-    justify-items: flex-start;
-    align-items: flex-start;
-
-text-align: left;
+    justify-items: center;
+    align-items: center;
+height: 40dvh;
+text-align: center;
+padding-top: 2%;
     
 }
 
 .skill-bar {width: 15dvw;}
 
-.fotos { flex-wrap: nowrap; 
+.fotos { flex-wrap: nowrap; margin-right: 5dvw; margin-left: 4dvw;
    
 }
-.foto1 {width: 35vw; border-radius: 10px;}
-.foto2 {width: 15vw; margin-bottom: -10%; margin-left: -70%; border-radius: 10px;}
-.aboutme {display: flex; flex-direction: row;}
+.foto1 {width: 35vw; border-radius: 10px; margin-top: -5%;}
+.foto2 {width: 15vw; margin-bottom: -10%; margin-top: -30%; border-radius: 10px; margin-left: -10dvw;}
+.aboutme {display: flex; flex-direction: row; margin-top: -10%;}
 .service-container {
     display: flex;
-    max-width: 90%;
+    max-width: 90%; margin-left: 1dvw;
     
 }
 .textservice {margin-top: -1%; margin-bottom: -0.5%;}
@@ -277,20 +299,7 @@ text-align: left;
 
 
 
-.slider-outer-container {
-    display: flex;
-    overflow: hidden;
-    width: 150%;
-    justify-content: center;
-}
 
-.slider-container {
-    display: flex;
-    width: max-content;
-    justify-content: flex-start;
-    scroll-behavior: smooth;
-    overflow: auto;
-}
 
 .portfolio-card {
     flex-shrink: 0;
@@ -332,64 +341,23 @@ text-align: left;
 
 /* Ваши текущие стили */
 
- .b5 .slider-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .b5 .prev-button,
-        .b5 .next-button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .b5 .slider {
-            display: flex;
-            overflow: hidden;
-            width: 70dvw; /* Ширина видимой области слайдера (2 элемента видны + 30% соседних) */
-            border: 1px solid #ddd;
-            align-items: s;
-            padding-left: -40%;
-        }
-
-        .b5 .slider-item  {
-            flex: 0 0 calc(42% - 10px); /* Ширина каждого элемента (30% от контейнера) с отступом */
-            margin: 5px; /* Отступ между элементами */
-            background-color: #fff;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-            min-height: 100px;
-            margin-right: 2.5dvw; 
-            margin-left: 2.5dvw;
-            min-width: 35dvw;
-            width: 35dvw;
-            height: 30dvh; /* Минимальная высота элемента для правильного выравнивания */
-        }
 
 
-        .container {
+
+        .container { 
     text-align: center;
-    background-color: #000000;
+    background-color: rgba(16, 16, 16, 0.607);
     padding: 2%;
     border-radius: 9%;
-  
-    width: 68%;
+   
+    width: 76%;
     margin: 0 auto;
     margin-left: 0%;
 border-radius: 3%;; background-size: cover;
 margin-top: -8%;
-margin-left: 5%;
+margin-left: 0%;
 padding-right: -8%;
-   
+border: solid 0.5dvw black;   
 }
 
 .iframe-container {
@@ -429,10 +397,18 @@ iframe {
     background-position: center;
 }
 
+.#resizeHandle:active { transform: scale(2) translateZ(10dvw);}
 
+.portfolio-block {padding-right: 2dvw; background-color: #3d3d3d;}
 .portfolio {
  font-size: 5dvw; margin-left: -55%;
- line-height: 1.4; color: rgb(177, 35, 35); margin-top: -2%;
+ line-height: 1.4; color: rgb(177, 35, 35); margin-top: -2%;  color: rgb(177, 35, 35);
+    
+ text-shadow:  -5px 5px 0px rgba(125, 26, 26, 0.334),
+
+                 -7.5px 7.5px 0px rgba(86, 17, 17, 0.23),
+
+                 -10px 10px 15px rgba(30, 4, 4, 0.778);
 
 }
 
@@ -452,15 +428,41 @@ height: 6dvw;
 flex-direction: row;
 justify-content: space-between;
 }
-.portfolio-nav {height: 6dvw; width: 6dvw; border-radius: 60%; background-color: #8e0606; font-size: 4dvh; border:solid; border-width: 0.5dvw; border-color: #8e0606; background-color: #000; color: #ffffff; font-weight: 1dvw; line-height: 0;}
+.portfolio-nav {height: 6dvw; 
+    width: 6dvw; 
+    border-radius: 60%; 
+    background-color: #8e0606; 
+    font-size: 4dvh; 
+    border:solid; 
+    border-width: 0.5dvw; 
+    border-color: #8e0606; 
+    background-color: #000; 
+    color: #ffffff; 
+    font-weight: 1dvw; 
+    line-height: 0;
 
-.raaa { font-size: 3dvw; left: 0;padding-left: 350px; margin-left: 25dvw; color: #ffffff; position: absolute; text-align: left;}
+
+    
+    transition: transform 0.6s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s;
+    color: #ffffffc7;
+    box-shadow: -7px 0px 0px 0px rgba(95, 4, 4, 0.678);
+}
+
+.portfolio-nav:hover {
+    background-color: #a10808;
+    color: rgb(255, 255, 255);
+    filter: brightness(1.2);  box-shadow:  rgb(44, 3, 3) /* Увеличение яркости при наведении */
+}
+
+
+
+.raaa { font-size: 3dvw; left: 0;padding-left: 350px; margin-left: 12dvw; color: #ffffff; position: absolute; text-align: left;}
 
 
 .daaa{
-    font-size: 1dvw; left: 0; padding-left: 350px; margin-left: 25dvw; color: #ffffffbb; position: absolute; text-align: left;  margin-top: 15dvw; 
+    font-size: 1dvw; left: 0; padding-left: 350px; margin-left: 12dvw; color: #ffffffbb; position: absolute; text-align: left;  margin-top: 15dvw; 
 }
-.info { position: absolute; right: 3dvw; margin-top: 6dvh; border-radius: 10%; line-height: normal;
+.info { position: absolute; right: 2.8dvw; margin-top: 6dvh; border-radius: 10%; line-height: normal;
     display: flex;
 width: 13dvw;
 height: 6dvw;
@@ -490,18 +492,19 @@ justify-content: space-around; text-align: center;  align-content: center; font-
 
 .card2 {background-color: #561e1e;}
 
-.input-container { height: 10dvw; display: flex; justify-content: space-evenly; width: 100%; padding-left: 10%; padding-right: 10%; margin-top: -1dvw; }
+.input-container { height: 10dvw; display: flex; justify-content: space-evenly; width: 100%; padding-left: 10%; padding-right: 10%; margin-top: 3dvw; }
 .small-container {display: flex; height: 10dvw; flex-direction: column; justify-content: space-between; width: 34dvw;}
 .big {width: 34dvw;}
 
-.contact-container {display: flex; width: 100%; justify-content: space-around; margin-bottom: 1%; margin-top: 3%;}
+.contact-container {display: flex; width: 100%; justify-content: space-around; margin-bottom: 2.5%; margin-top: 8%;}
 .contact img {width: 6dvw; }
-.home1 {max-width: 4dvw;}
+.home1 {max-width: 5dvw;}
 .bigcon {margin-top: -10%;}
 
 .contact {width: 20dvw; flex-direction: column-reverse;}
 
-input {border-radius: 8px; border: solid; border-color: rgb(177, 35, 35);border-width: 0; border-bottom-width: 0.55dvw; background-color: rgba(0, 0, 0, 0); color: rgb(177, 35, 35); font-size: 1.3dvw; padding: 0.3dvw;}
+input {border-radius: 8px; border: solid; border-color: rgb(191, 29, 29);border-width: 0; border-bottom-width: 0.55dvw; background-color: rgba(0, 0, 0, 0.695); color: rgb(177, 35, 35); font-size: 1.3dvw; padding: 0.4dvw;}
+.pony {max-height: 2dvw;}
 
 @media screen and (min-width: 2000px) {.raaa .daaa {margin-left: 0dvw;}}
 
@@ -525,19 +528,10 @@ input {border-radius: 8px; border: solid; border-color: rgb(177, 35, 35);border-
     transition: transform 0.4s, background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Плавная анимация изменения цветов и тени */
 }
 
-.info:hover {
-    background-color: rgba(43, 42, 42, 0.512);
-    color: rgb(177, 35, 35);
-    transform: scale(1.1);
-    box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
-}
 
-.info:active {
-    background-color: rgba(43, 42, 42, 0.512);
-    color: rgb(177, 35, 35);
-    transform: scale(1.1);
-    box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
-}
+
+
+
 
 
 /* Стили для .git */
@@ -564,17 +558,42 @@ input {border-radius: 8px; border: solid; border-color: rgb(177, 35, 35);border-
   color: #ffffff;
 }
 
+
+
+
+
+
+
 /* Стили для .portfolio-nav */
 .portfolio-nav {
 
-  transition: transform 0.1s, background-color 0.1s, color 0.3s; color: #ff0000; background-color: rgba(43, 42, 42, 0);/* Плавные анимации */
+  transition: transform 0.1s, background-color 0.1s, color 0.3s; color: #ffffffa4; box-shadow: -10px 0px 0px 0px  rgba(95, 4, 4, 0.678);
+  background-color: rgba(43, 42, 42, 0);/* Плавные анимации */  transition: 0.5s;
 }
 
 .portfolio-nav:hover {
   background-color: rgb(136, 22, 22);
   color: #ffffff;
-  transform: scale(1.1); /* Увеличение размера при наведении */
+   transform: scale(1.1); box-shadow: -8.5px 0px 0px 0px rgb(98, 6, 6);
 }
+
+.portfolio-nav.right {
+
+    box-shadow: 10px 0px 0px 0px  rgba(95, 4, 4, 0.678)/* Плавные анимации */
+}
+
+.portfolio-nav.right:hover {
+  background-color: rgb(136, 22, 22);
+  color: #ffffff;
+  transform: scale(1.1); box-shadow: 8.5px 0px 0px 0px rgb(98, 6, 6);/* Увеличение размера при наведении */
+}
+
+
+
+
+
+
+
 
 .mana { background-color: rgba(43, 42, 42, 0.821);box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
   color: rgb(177, 35, 35); transition: transform 0.4s,}
@@ -584,21 +603,23 @@ input {border-radius: 8px; border: solid; border-color: rgb(177, 35, 35);border-
   .big {border-width: 0.55dvw; border-bottom-width: 0.55dvw ;}
 
   .conta { margin-top: 2dvw;}
-  .contac {margin-top: 0.1dvw; margin-bottom: 1.5dvw; }
+  .contac {margin-top: 2dvw; margin-bottom: 0.5dvw; }
   .contact {font-size: 1dvw;}
-  .send {width: 10dvw;margin-top: 2dvw; background-color: inherit; font-size: 3vw; border: none; color: rgb(177, 35, 35);}
+  .send {width: 10dvw;margin-top: 3dvw; background-color: rgba(0, 0, 0, 0); font-size: 3vw; border: none; color: rgb(177, 35, 35);}
  .contact h3 {color: rgb(177, 35, 35); font-size: 1dvw; margin-top: -4dvw; line-height: 0;}
  .send:hover {transform: scale(1.2); color: rgb(219, 44, 44);}
  ::placeholder {color: rgba(177, 35, 35, 0.618);}
 .block[data-index="6"] {
-    height: 30%; background-color: rgb(177, 35, 35); align-content: flex-start;
+    height: 30%; background-color: rgb(177, 35, 35); align-content: flex-start; margin-right: 10%; z-index: -100; padding: 0.5dvw; margin-bottom: -3dvw; border-radius: 0.3dvw;
     /* Другие стили вашего блока */
 }
-.btn-nav[data-target="6"]  h1 {background-color: #00000000; color: #ffffff;}
 
-#resizeHandle:hover {
+
+.btn-nav[data-target="6"]  h1 {background-color: #00000000; color: #ffffff; }
+
+#resizeHandle:hover { padding: 5px;
     /* Ваши текущие стили для ресайзера */
-    transform: scale(1.2) translateZ(20px); background-color: rgba(177, 35, 35, 0.312);
+    transform: scale(1.3) translateY(-40px) translateX(-15px) translateZ(40px); background-color: rgba(177, 35, 35, 0.312); 
 }
 
  .selected, .mana a {
@@ -626,28 +647,176 @@ input {border-radius: 8px; border: solid; border-color: rgb(177, 35, 35);border-
     transition: transform 0.4s, background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Плавная анимация изменения цветов и тени */
 }
 
-.info:hover {
-    background-color: rgba(43, 42, 42, 0.512);
-    color: rgb(177, 35, 35);
+
+
+
+
+
+
+.portfolio-nav:active, .portfolio-nav.right:active { transform: scale(1.3);
+   
+    transition: background-color 1s, color 1s, transform 1s, box-shadow 0.4s; 
+    box-shadow: rgba(255, 255, 255, 0.366) 0px 0px 0px; transform: translateX();}
+
+    .portfolio-nav.right:active {transform: translateX(15px);}
+
+.portfolio-nav:active {transform: translateX(-15px);}
+
+
+
+
+
+
+
+
+    .skills {background-color: rgba(177, 35, 35, 0.889);  
+    color: #000000;
+    
+    transition: transform 0.6s, background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+    color: #ffffffc7;   box-shadow: -10px 12px 0px 0px rgb(151, 3, 3)}
+    .skills:hover {background-color: #780707;  ;
+    color: rgb(255, 255, 255);
+   
+    }
+    .skills:active {background-color: rgba(43, 42, 42, 0.512);
+    color: rgb(255, 255, 255);
     transform: scale(1.1);
     box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
+    transition: background-color 2s, color 2s, transform 2s, box-shadow 2s;
+     box-shadow: -6px 8.5px 0px 0px rgba(107, 5, 5, 0.652);}
+
+    .skills.mana { box-shadow: -5.5px 7px 0px 0px rgb(61, 2, 2);  transform: scale(0.98) translateY(8px);filter: brightness(1.2); 
+        background-color: rgb(106, 20, 20); }
+    .skills.mana:active { box-shadow: -5.5px 6px 0px 0px rgb(107, 5, 5);  
+        transition: background-color 3s, color 3s, transform 3s, box-shadow 3s; background-color: #561e1e00;}
+
+  .links  {width: 30dvw;  display: flex; margin-left: 38dvw;  margin-top: 23%; justify-content: space-around; position: absolute;}
+  .thumbnail img {max-height: 7.5dvw; }
+  .thumbnail {font-size: 0.9dvw; padding-left: 10px;}.thumbnail:hover {cursor: pointer; filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(20px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)  }
+
+
+
+.pdf-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
 }
 
-.info.mana {
-    background-color: rgba(43, 42, 42, 0.512);
-    color: rgb(177, 35, 35);
-    transform: scale(1.1);
-    box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Анимация для состояния с классом .mana */
+.pdf-content {
+    background-color: #fff;
+    max-width: 800px;
+    width: 850px;
+    height: 80dvh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.pdf-content img {
+    flex-grow: 1;
+    border: none;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.lebens img {z-index: -100; height: 8dvw;}
+
+
+
+.info {
+    background-color: rgba(177, 35, 35, 0.889);
+    color: #000000;
+    transition: transform 0.6s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s;
+    color: #ffffffc7;
+    box-shadow: -10px 12px 0px 0px rgba(201, 4, 4, 0.497);
+}
+
+.info:hover {skills
+    background-color: #a10808;
+    color: rgb(255, 255, 255);
+    filter: brightness(1.2); /* Увеличение яркости при наведении */
 }
 
 .info:active {
     background-color: rgba(43, 42, 42, 0.512);
-    color: rgb(177, 35, 35);
-    transform: scale(1.1);
-    box-shadow: 0px 14px 0px 0px rgba(201, 4, 4, 0.364);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Плавная анимация для активного состояния */
+    color: rgb(255, 255, 255);
+    transform: scale(1.1) translateY(5px); /* Slight downward movement */
+    box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
+    filter: brightness(1.5); /* Увеличение яркости при нажатии */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s;
+    box-shadow: -6px 8.5px 0px 0px rgba(107, 5, 5, 0.652);
 }
-.portfolio-nav:active { transform: scale(1.3);
-   
-    transition: background-color 1s, color 1s, transform 1s, box-shadow 0s;}
+
+.info.mana {
+    box-shadow: -6.5px 7px 0px 0px rgba(62, 2, 2, 0.93);
+    background-color: rgb(131, 26, 26); transform: scale(0.92) translateY(12px);filter: brightness(1.2);
+}
+
+.info.mana:active {
+    box-shadow: -5.5px 6px 0px 0px rgb(107, 5, 5);
+    transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s;
+    background-color: #561e1e00;
+}
+
+
+
+
+
+/* Стили для кнопок в блоке портфолио */
+.btn-nav-portfolio {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    padding: 15px;
+    padding-right: 105px;
+    padding-left: 25px;
+    width: 100%;
+    color: rgba(177, 35, 35, 0.396);
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: left;
+    cursor: pointer;
+    border: 1px solid red;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.btn-nav-portfolio:hover {
+    background-color: rgba(43, 42, 42, 0.512);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1) translateY(5px);
+    box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+
+.hide {display: none;}
+
+.promo-container { width: 60dvw;  margin-top: -10dvw;  display: flex; justify-content: space-between;}
+
+.promo img {width: 12dvw;  height: 20dvw; padding-left: 3dvw; padding-right: 3dvw; padding-top: -3dvw; margin-bottom: -4dvw;} 
+
+.promo:hover {cursor: pointer; filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(20px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)  
+}
+
+
+.big::placeholder {font-size: 4dvw; text-align: center;} 

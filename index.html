@@ -19,8 +19,8 @@
         </div>
         <div class="nav">
             <button class="btn-nav" data-target="0">HOME</button>
-            <button class="btn-nav" data-target="1">ABOUT</button>
-            <button class="btn-nav" data-target="2">SERVICES</button>
+            <button class="btn-nav" data-target="1">ÜBER MICH</button>
+            <button class="btn-nav" data-target="2">SERVICE</button>
             <button class="btn-nav" data-target="3">EXAMPLE</button>
             <button class="btn-nav" data-target="4">BLOG</button>
             <button class="btn-nav" data-target="5">CONTACT</button>
@@ -44,7 +44,61 @@
                     <p class="description about">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
                     <button class="skills">SHOW MY SKILLS</button>
                 </div>
+
+
             </div>
+            
+<div class="links">
+    <div class="thumbnail" data-pdf="img/bildung (24).pdf">
+        <img src="img/edu.svg" alt="Миниатюра PDF"> <h2>Bildung</h2>
+    </div>
+    <div class="thumbnail" >
+        <img src="img/git.svg" alt="Миниатюра PDF"> <h2>Git</h2>
+    </div>
+    <div class="thumbnail" data-pdf="img/zer.pdf">
+        <img src="img/leben.svg" alt="Миниатюра PDF"> <h2>Lebenslauf</h2>
+    </div>
+</div>
+
+<div class="pdf-modal" id="pdfModal">
+    <div class="pdf-content">
+        <iframe src="" frameborder="0" id="pdfIframe"></iframe>
+        <span class="close" id="closeButton">&times;</span>
+    </div>
+</div>
+
+<script>
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const pdfModal = document.querySelector('#pdfModal');
+    const closeButton = document.querySelector('#closeButton');
+    const pdfIframe = document.querySelector('#pdfIframe');
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+            const pdfPath = thumbnail.getAttribute('data-pdf');
+            pdfIframe.src = pdfPath;
+            pdfModal.style.display = 'flex';
+        });
+    });
+
+    closeButton.addEventListener('click', () => {
+        pdfIframe.src = '';
+        pdfModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', event => {
+        if (event.target === pdfModal) {
+            pdfIframe.src = '';
+            pdfModal.style.display = 'none';
+        }
+    });
+</script>
+
+
+
+
+           
+
             <div class="skill-container">
                 <div class="skill">
                     <h2 class="skill-name">HTML and CSS</h2>
@@ -88,19 +142,22 @@
                 </div>
             </div>
         </div>
-        <div class="block b2" data-index="3"> 
-           
+     
+        <div class="block b2 portfolio-block" data-index="3"> 
+         
             
-            <h2 class="project-number">1</h2>
-            <h2 class="project-name">Course Planet</h2>
-            <button class="git"><h1>Open in GitHub</h1></button>
-            <button class="info">info</button>
+
+
+            <h2 class="project-number hide">1</h2>
+            <h2 class="project-name hide">Course Planet</h2>
+            <button class="git hide"><h1>Open in GitHub</h1></button>
+            <button class="info hide">info</button>
             <h1 class="portfolio">EXAMPLE</h1>
-            <div class="buttons-por">
+            <div class="buttons-por hide">
                 <button class="portfolio-nav">←</button>
-                <button class="portfolio-nav">→</button>
+                <button class="portfolio-nav right">→</button>
             </div>
-            <div class="container">
+            <div class="container hide">
                 <h1 class="raaa">NAME<br>FIRMA<br>DATUM</h1>
                 <p class="daaa"> asdas dsadasd asdsad sadas ddasdsad <br> asdasdas asdasdq  qweqw  qweqwe weqw <br>gdhdgdf  sdfsdf sfea ada</p>
                 <div class="iframe-container" id="iframe-container">
@@ -108,57 +165,54 @@
                     <div class="resize-handle" id="resizeHandle"></div>
                 </div>
             </div>
+             <div class="promo-container">
+            <div class="promo" id="scroll"><img src="img/scroll.svg" alt=""><h2>1. Scroll Effect</h2> </div>
+            <div class="promo" id="rest"><img src="img/api.svg" alt=""><h2>2. Rest API</h2></div>
+            <div class="promo" id="noch"><img src="img/rob.svg" alt=""><h2>3. ETWAS NOCH</h2></div>
+          </div>
         </div>
+
         <div class="block b3" data-index="4"> 
             <div class="card1"></div>
         </div>
-        <div class="block 3" data-index="5"> 
+        <div class="block b3" data-index="5"> 
             <h1 class="title-b conta">Contact us</h1>
             <p class="description d-sev contac">Lorem ipsum dolor sit amet, consectetur adipiscing elit adipiscing elit </p>
                 <div class="input-container">
                     <div class="small-container">
-                        <input class="small" type="name" placeholder="NAME">
-                    <input class="small" type="email" placeholder="FIRMA">
-                    <input class="small" type="FIRMA" placeholder="EMAIL">
-                   
+                        <input class="small" type="text" placeholder="NAME">
+                        <input class="small" type="text" placeholder="FIRMA">
+                        <input class="small" type="email" placeholder="EMAIL">
                     </div>
-                     <input class="big" type="text">
+                     <input class="big" type="text" text="IHRE NACHRICHT">
                 </div>
-
                 <button class="send">SEND</button>
-
-<div class="contact-container">
-    <div class="contact bigcon">
-      
-        <img src="img/whats.svg" alt="">
-          <h2>1232391293</h2>
-    </div>
-     <div class="contact">
-        <h3>nach</h3>
-        <img src="img/home.svg" alt="" class="home1">
-        <h2>Gütersloh</h2>
-    </div>
-    <div class="contact bigcon">
-        
-        <img src="img/gmail.svg" alt="">
-        <h2>strelcov0921@gmail.com</h2>
-    </div>
-
-
-</div>
-
-      
+                <div class="contact-container">
+                    <div class="contact bigcon">
+                        <img src="img/whats.svg" alt="">
+                        <h2>1232391293</h2>
+                    </div>
+                     <div class="contact">
+                        <h3>nach</h3>
+                        <img src="img/home.svg" alt="" class="home1">
+                        <h2>Gütersloh</h2>
+                    </div>
+                    <div class="contact bigcon">
+                        <img src="img/gmail.svg" alt="">
+                        <h2>strelcov0921@gmail.com</h2>
+                    </div>
+                </div>
         </div>
     </main>
-
     <footer>        
-         <div class="block b3" data-index="6">
-    <!-- Содержимое вашего нового блока здесь -->© Copyright 2023 - by Michael Streltsov
-</div>
-</footer>
-
-
-    <script src="js/js.js"></script>
+        <div class="block b3" data-index="6">
+            <!-- Содержимое вашего нового блока здесь -->
+            © Copyright 2023 - by Michael Streltsov
+        </div>
+    </footer>
+    
     <script src="js/javascript.js"></script>
+    
+
 </body>
 </html>
