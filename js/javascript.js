@@ -246,16 +246,18 @@ document.addEventListener('DOMContentLoaded', function () {
 	const restApiPromo = document.querySelector('#rest')
 	restApiPromo.addEventListener('click', function () {
 		updateProjectAndVisibility(2)
-		 promoContainers.forEach(container => {
-    container.classList.add('hide');
-	})})
+		promoContainers.forEach(container => {
+			container.classList.add('hide')
+		})
+	})
 
 	const etwasNochPromo = document.querySelector('#noch')
 	etwasNochPromo.addEventListener('click', function () {
 		updateProjectAndVisibility(3)
-		 promoContainers.forEach(container => {
-    container.classList.add('hide');
-	})})
+		promoContainers.forEach(container => {
+			container.classList.add('hide')
+		})
+	})
 
 	function updateProjectData(projectNumber) {
 		const projectNameElement = document.querySelector('.project-name')
@@ -409,8 +411,32 @@ document.addEventListener('DOMContentLoaded', function () {
 var promoContainer = document.querySelector('.promo-container')
 
 // Добавляем обработчик клика на элемент "promoContainer"
-promoContainer.addEventListener("click", function() {
-    // Добавляем класс "hide" для скрытия элемента
-    promoContainer.style.display = "none"
-});
+promoContainer.addEventListener('click', function () {
+	// Добавляем класс "hide" для скрытия элемента
+	promoContainer.style.display = 'none'
+})
 
+  const thumbnails = document.querySelectorAll('.thumbnail')
+	const pdfModal = document.querySelector('#pdfModal')
+	const closeButton = document.querySelector('#closeButton')
+	const pdfIframe = document.querySelector('#pdfIframe')
+
+	thumbnails.forEach(thumbnail => {
+		thumbnail.addEventListener('click', () => {
+			const pdfPath = thumbnail.getAttribute('data-pdf')
+			pdfIframe.src = pdfPath
+			pdfModal.style.display = 'flex'
+		})
+	})
+
+	closeButton.addEventListener('click', () => {
+		pdfIframe.src = ''
+		pdfModal.style.display = 'none'
+	})
+
+	window.addEventListener('click', event => {
+		if (event.target === pdfModal) {
+			pdfIframe.src = ''
+			pdfModal.style.display = 'none'
+		}
+	})

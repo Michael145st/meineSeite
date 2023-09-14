@@ -107,7 +107,7 @@ main {
 .block {
     height: 100dvh;
    
-background-image: url(../img/b.svg); background-position: center; background-size: cover; background-attachment: ;
+background-image: url(../img/b.svg); background-position: center; background-size: cover; 
  
     width: 80dvw;
     background-color: rgba(0, 0, 0, 0.3);
@@ -126,7 +126,7 @@ background-image: url(../img/b.svg); background-position: center; background-siz
     overflow-x: hidden;
    transform: scale(0.92) translateY(2dvh );
     box-shadow: -32px 10px 0px 0px rgba(35, 3, 3, 0.673);
-    margin-bottom: 2dvw;
+    margin-bottom: 5dvw;
     margin-left: 1dvw; margin-top: -1.7%; transition: transform 0.3s ease,  border 0.3s  ease; 
 }
 
@@ -397,7 +397,7 @@ iframe {
     background-position: center;
 }
 
-.#resizeHandle:active { transform: scale(2) translateZ(10dvw);}
+.resizeHandle:active { transform: scale(2) translateZ(10dvw);}
 
 .portfolio-block {padding-right: 2dvw; background-color: #3d3d3d;}
 .portfolio {
@@ -476,7 +476,7 @@ width: 16dvw;
 margin-top: -6dvw;
 flex-direction: row;
 justify-content: space-around; text-align: center;  align-content: center; }
-.git {position: absolute; right: 3dvw; margin-top: 33dvh;  line-height: normal
+.git {position: absolute; right: 3dvw; margin-top: 33dvh;  line-height: normal;
     display: flex;
 width: 13dvw;
 height: 3.5dvw;
@@ -596,7 +596,7 @@ input {border-radius: 8px; border: solid; border-color: rgb(191, 29, 29);border-
 
 
 .mana { background-color: rgba(43, 42, 42, 0.821);box-shadow: -6px 8px 0px 0px rgba(201, 4, 4, 0.364);
-  color: rgb(177, 35, 35); transition: transform 0.4s,}
+  color: rgb(177, 35, 35); transition: transform 0.8s ease,}
 
   .interface {display: flex; flex-direction: column; min-height: min-content; margin-left: 2dvw;}
 
@@ -750,7 +750,7 @@ input {border-radius: 8px; border: solid; border-color: rgb(191, 29, 29);border-
     box-shadow: -10px 12px 0px 0px rgba(201, 4, 4, 0.497);
 }
 
-.info:hover {skills
+.info:hover {
     background-color: #a10808;
     color: rgb(255, 255, 255);
     filter: brightness(1.2); /* Увеличение яркости при наведении */

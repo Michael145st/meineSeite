@@ -67,32 +67,6 @@
     </div>
 </div>
 
-<script>
-    const thumbnails = document.querySelectorAll('.thumbnail');
-    const pdfModal = document.querySelector('#pdfModal');
-    const closeButton = document.querySelector('#closeButton');
-    const pdfIframe = document.querySelector('#pdfIframe');
-
-    thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', () => {
-            const pdfPath = thumbnail.getAttribute('data-pdf');
-            pdfIframe.src = pdfPath;
-            pdfModal.style.display = 'flex';
-        });
-    });
-
-    closeButton.addEventListener('click', () => {
-        pdfIframe.src = '';
-        pdfModal.style.display = 'none';
-    });
-
-    window.addEventListener('click', event => {
-        if (event.target === pdfModal) {
-            pdfIframe.src = '';
-            pdfModal.style.display = 'none';
-        }
-    });
-</script>
 
 
 
@@ -166,9 +140,9 @@
                 </div>
             </div>
              <div class="promo-container">
-            <div class="promo" id="scroll"><img src="img/scroll.svg" alt=""><h2>1. Scroll Effect</h2> </div>
-            <div class="promo" id="rest"><img src="img/api.svg" alt=""><h2>2. Rest API</h2></div>
-            <div class="promo" id="noch"><img src="img/rob.svg" alt=""><h2>3. ETWAS NOCH</h2></div>
+            <div class="promo" id="scroll"><img src="img/scroll.svg" alt=""><h2> Scroll Effect</h2> </div>
+            <div class="promo" id="rest"><img src="img/api.svg" alt=""><h2> Rest API</h2></div>
+            <div class="promo" id="noch"><img src="img/rob.svg" alt=""><h2> ETWAS NOCH</h2></div>
           </div>
         </div>
 
