@@ -112,7 +112,7 @@ background-image: url(../img/b.svg); background-position: center; background-siz
     width: 80dvw;
     background-color: rgba(0, 0, 0, 0.3);
 
-    border: 0.5dvw solid rgba(80, 18, 18, 0.866);
+    border: 0.5dvw solid rgb(80, 18, 18);
     border-radius: 2dvw;
     scroll-snap-align: start;
     text-align: center;
@@ -127,7 +127,7 @@ background-image: url(../img/b.svg); background-position: center; background-siz
    transform: scale(0.92) translateY(2dvh );
     box-shadow: -32px 10px 0px 0px rgba(35, 3, 3, 0.673);
     margin-bottom: 5dvw;
-    margin-left: 1dvw; margin-top: -1.7%; transition: transform 0.3s ease,  border 0.3s  ease; 
+    margin-left: 1dvw; margin-top: -1%; transition: transform 0.3s ease,  border 0.3s  ease; 
 }
 
 
@@ -169,7 +169,7 @@ background-image: url(../img/b.svg); background-position: center; background-siz
                  -10px 10px 15px rgba(30, 4, 4, 0.778);
 
 
-
+filter: brightness(1.3);
 
 
 }
@@ -409,7 +409,7 @@ iframe {
                  -7.5px 7.5px 0px rgba(86, 17, 17, 0.23),
 
                  -10px 10px 15px rgba(30, 4, 4, 0.778);
-
+filter: brightness(1.3);
 }
 
 h3 {color: #000;
@@ -817,6 +817,9 @@ input {border-radius: 8px; border: solid; border-color: rgb(191, 29, 29);border-
 
 .promo:hover {cursor: pointer; filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateY(-10px) translateX(20px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)  
 }
-input:hover { filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(10px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)}
+input:hover, input:focus { filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(10px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)}
 .send:hover {cursor: pointer; filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(20px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)}
-.big::placeholder {font-size: 4dvw; text-align: start; color: rgba(113, 22, 22, 0.668); font-weight: 300;} .big {width: 34dvw; height: auto; align-content: ; display: flex; }
+.big {width: 34dvw; height: auto; align-content: center ; display: flex; }
+.big::placeholder {background-color: #00000007; font-size: 4dvw; text-align: start; color: rgba(113, 22, 22, 0.668); font-weight: 300;} 
+.arrow {position: absolute; color: rgba(255, 255, 255, 0.711); font-size: 2.5dvw; right: 12dvw; background-color: rgba(255, 255, 255, 0); font-weight: 600; border: none;}
+.arrow:hover {scale: 1.1; color: white; transition: ease 0.1s; }
