@@ -826,5 +826,5 @@ input:hover, input:focus { filter: brightness(1.3); transition: transform 0.3s, 
 .adi .title-b {font-size: 8dvw; margin-top: 14.5dvw;   position: absolute; contain: layout;}
 
 .title-b.white {color: #fff; font-size: 2.6dvw; margin-top: -7dvw;}
-.title-b.gray {color: #909090; font-size: 1.5dvw; margin-top: 40.5dvw; font-family: 'Nunito', sans-serif;}
+.title-b.gray {color: #909090; font-size: 2dvw; margin-top: 40.5dvw; font-family: 'Nunito', sans-serif;}
 
