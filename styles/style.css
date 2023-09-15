@@ -105,7 +105,7 @@ main {
 
 /* Стили для блоков */
 .block {
-    height: 100dvh;
+    height: 100dvh; overflow-y: hidden;
    
 background-image: url(../img/b.svg); background-position: center; background-size: cover; 
  
@@ -127,7 +127,7 @@ background-image: url(../img/b.svg); background-position: center; background-siz
    transform: scale(0.92) translateY(2dvh );
     box-shadow: -32px 10px 0px 0px rgba(35, 3, 3, 0.673);
     margin-bottom: 5dvw;
-    margin-left: 1dvw; margin-top: -1%; transition: transform 0.3s ease,  border 0.3s  ease; 
+    margin-left: 1dvw; margin-top: -1.7%; transition: transform 0.3s ease,  border 0.3s  ease; 
 }
 
 
@@ -280,7 +280,7 @@ padding-top: 2%;
    
 }
 .foto1 {width: 35vw; border-radius: 10px; margin-top: -5%;}
-.foto2 {width: 15vw; margin-bottom: -10%; margin-top: -30%; border-radius: 10px; margin-left: -10dvw;}
+.foto2 {width: 15vw; margin-bottom: -10%; margin-top: -30%; border-radius: 10px; margin-left: -15dvw; }
 .aboutme {display: flex; flex-direction: row; margin-top: -10%;}
 .service-container {
     display: flex;
@@ -692,7 +692,7 @@ input {border-radius: 8px; border: solid; border-color: rgb(191, 29, 29);border-
 
   .links  {width: 30dvw;  display: flex; margin-left: 38dvw;  margin-top: 23%; justify-content: space-around; position: absolute;}
   .thumbnail img {max-height: 7.5dvw; }
-  .thumbnail {font-size: 0.9dvw; padding-left: 10px;}.thumbnail:hover {cursor: pointer; filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(20px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)  }
+  .thumbnail {font-size: 0.9dvw; padding-left: 10px;  }.thumbnail:hover {cursor: pointer; filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(20px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)  }
 
 
 
@@ -811,7 +811,7 @@ input {border-radius: 8px; border: solid; border-color: rgb(191, 29, 29);border-
 
 .hide {display: none;}
 
-.promo-container { width: 60dvw;  margin-top: -10dvw;  display: flex; justify-content: space-between;}
+.promo-container { width: 60dvw;  margin-top: -10dvw;  display: flex; justify-content: space-between; } 
 
 .promo img {width: 12dvw;  height: 20dvw; padding-left: 3dvw; padding-right: 3dvw; padding-top: -3dvw; margin-bottom: -4dvw;} 
 
@@ -820,6 +820,10 @@ input {border-radius: 8px; border: solid; border-color: rgb(191, 29, 29);border-
 input:hover, input:focus { filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(10px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)}
 .send:hover {cursor: pointer; filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(20px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)}
 .big {width: 34dvw; height: auto; align-content: center ; display: flex; }
-.big::placeholder {background-color: #00000007; font-size: 4dvw; text-align: start; color: rgba(113, 22, 22, 0.668); font-weight: 300;} 
+.big::placeholder {background-color: #00000007; font-size: 3dvw;  margin-top: 1.5dvw; text-align: center; color: rgba(113, 22, 22, 0.668); font-weight: 300;} 
 .arrow {position: absolute; color: rgba(255, 255, 255, 0.711); font-size: 2.5dvw; right: 12dvw; background-color: rgba(255, 255, 255, 0); font-weight: 600; border: none;}
 .arrow:hover {scale: 1.1; color: white; transition: ease 0.1s; }
+.adi .title-b {font-size: 7dvw; margin-top: -6dvw; margin-bottom: 2dvw; margin-top: -15dvw;}
+
+.title-b.white {color: #fff; font-size: 2.9dvw; margin-top: 4dvw; margin-bottom: 5dvw;}
+
