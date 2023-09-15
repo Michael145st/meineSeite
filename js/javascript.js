@@ -440,3 +440,60 @@ promoContainer.addEventListener('click', function () {
 			pdfModal.style.display = 'none'
 		}
 	})
+
+	document.addEventListener('DOMContentLoaded', function () {
+		const sendButton = document.getElementById('sendButton')
+
+		sendButton.addEventListener('click', function () {
+			// Получение значений из input полей
+			const name = document.getElementById('name').value
+			const company = document.getElementById('company').value
+			const email = document.getElementById('email').value
+			const message = document.getElementById('message').value
+
+			// Дальше можно использовать эти значения
+			console.log('Name: ' + name)
+			console.log('Company: ' + company)
+			console.log('Email: ' + email)
+			console.log('Message: ' + message)
+
+			fetch('send_email.php', {
+				method: 'POST',
+				body: JSON.stringify(data),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			})
+
+				.then(response => {
+					if (response.ok) {
+						// Успешно отправлено
+						alert('Сообщение успешно отправлено.')
+						// Очистить поля формы после успешной отправки
+						document.getElementById('name').value = ''
+						document.getElementById('company').value = ''
+						document.getElementById('email').value = ''
+						document.getElementById('message').value = ''
+					} else {
+						// Ошибка отправки
+						alert('Произошла ошибка при отправке сообщения.')
+					}
+				})
+				.catch(error => {
+					console.error('Ошибка при отправке запроса:', error)
+				})
+
+		})
+	})
+
+document.addEventListener('DOMContentLoaded', function () {
+	// Найти кнопки "arrow" и "home" с data-target="0"
+	const arrowButton = document.querySelector('.arrow')
+	const homeButton = document.querySelector('[data-target="0"]')
+
+	// Добавить обработчик события клика на кнопку "arrow"
+	arrowButton.addEventListener('click', function () {
+		// Симулировать щелчок на кнопке "home" с data-target="0"
+		homeButton.click()
+	})
+})
