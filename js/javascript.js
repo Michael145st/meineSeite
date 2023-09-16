@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
-	updateProjectData(portfolioNumber)
+	
 
 	const activeButtonIndex = localStorage.getItem('activeButtonIndex')
 	if (activeButtonIndex !== null) {
@@ -495,5 +495,59 @@ document.addEventListener('DOMContentLoaded', function () {
 	arrowButton.addEventListener('click', function () {
 		// Симулировать щелчок на кнопке "home" с data-target="0"
 		homeButton.click()
+	})
+})
+document.addEventListener('DOMContentLoaded', function () {
+	const resizeHandle = document.getElementById('resizeHandle')
+	const iframeContainer = document.querySelector('.iframe-container')
+	const pageFrame = document.getElementById('pageFrame')
+	
+	const minWidth = 350
+	const maxWidth = 5000
+	const resizeSpeed = 1.35 // Скорость ресайза (на сколько пикселей изменяется ширина при каждом движении)
+	let isMinWidth = false
+
+	function setMinWidth() {
+		iframeContainer.style.width = minWidth + 'px'
+		isMinWidth = true
+	}
+
+	function setMaxWidth() {
+		iframeContainer.style.width = maxWidth + 'px'
+		isMinWidth = false
+	}
+
+	
+
+	let isResizing = false
+	let startX = 0
+	let startWidth = 0
+
+	resizeHandle.addEventListener('mousedown', e => {
+		e.preventDefault()
+		isResizing = true
+		startX = e.clientX
+		startWidth = iframeContainer.offsetWidth
+	})
+
+	document.addEventListener('mousemove', e => {
+		if (!isResizing) return
+		const deltaX = (e.clientX - startX) * resizeSpeed // Учитываем скорость ресайза
+		let newWidth = startWidth + deltaX
+		if (newWidth < minWidth) newWidth = minWidth
+		if (newWidth > maxWidth) newWidth = maxWidth
+		iframeContainer.style.width = newWidth + 'px'
+	})
+
+	document.addEventListener('mouseup', () => {
+		if (isResizing) {
+			isResizing = false
+		}
+	})
+
+	window.addEventListener('mouseup', () => {
+		if (isResizing) {
+			isResizing = false
+		}
 	})
 })
