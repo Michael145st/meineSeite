@@ -209,13 +209,14 @@ a {
 
 .card1 {
     display: flex;
-    width: 90%;
-    height: 90%;
+    width: 85%;
+    height: 80%;
     margin: 15%;
-    background-color: rgba(253, 3, 3, 0.745);
+    background-color: rgba(253, 3, 3, 0.495);
     border-radius: 25px;
     align-items: center;
     align-content: center;
+    
     
 }
 .card {
@@ -820,7 +821,7 @@ input {border-radius: 8px; border: solid; border-color: rgb(191, 29, 29);border-
 input:hover, input:focus { filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(10px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)}
 .send:hover {cursor: pointer; filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(20px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)}
 .big {width: 34dvw; height: auto; align-content: center ; display: flex; }
-.big::placeholder {background-color: #00000007; font-size: 3dvw;  margin-top: 1.5dvw; text-align: center; color: rgba(113, 22, 22, 0.668); font-weight: 300;} 
+.big::placeholder {background-color: #00000007; font-size: 2dvw;  margin-top: 1.5dvw; text-align: center; color: rgba(113, 22, 22, 0.668); font-weight: 300;} 
 .arrow {position: absolute; color: rgba(255, 255, 255, 0.711); font-size: 2.5dvw; right: 12dvw; background-color: rgba(255, 255, 255, 0); font-weight: 600; border: none;}
 .arrow:hover {scale: 1.1; color: white; transition: ease 0.1s; }
 .adi .title-b {font-size: 8dvw; margin-top: 14.5dvw;   position: absolute; contain: layout;}
@@ -828,3 +829,6 @@ input:hover, input:focus { filter: brightness(1.3); transition: transform 0.3s, 
 .title-b.white {color: #fff; font-size: 2.6dvw; margin-top: -7dvw;}
 .title-b.gray {color: #909090; font-size: 1.5dvw; margin-top: 40.5dvw; font-family: 'Nunito', sans-serif; text-shadow: none;}
 
+.citat {padding: 3dvw; margin-top: 1dvw;}
+.author {position: absolute; contain: layout; right: 12dvw; margin-top: 15dvw; font-family: 'Nunito'; color: rgba(255, 255, 255, 0.677); }
+.motto {margin-top: -35dvw; margin-left: -40dvw; position: absolute; contain: layout;  }
