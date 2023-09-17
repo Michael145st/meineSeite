@@ -51,7 +51,7 @@ header {z-index: +100;
  
     margin-top: 10px;
 }
-.unten {font-size: 15px; color: rgba(135, 135, 135, 0.785);}
+.unten {font-size: 15px; color: rgba(135, 135, 135, 0.785); padding: 1dvw;}
 
 .logo {
    margin-top: 2dvw;
@@ -88,10 +88,10 @@ header {z-index: +100;
     
 }
 
-main {
-    margin-left: 230px;
+main {background-color: rgb(72, 71, 71);
+    margin-left: 245px;
    margin-top: 0;
-    background-color: rgba(0, 0, 0, 0.471);
+    background-color: rgba(0, 0, 0, 0.873);
    overflow-x: hidden;
     scroll-snap-type: y proximity;
     padding: 0;
@@ -99,20 +99,20 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden; background-image: url(../img/bb.svg); background-attachment: fixed;
+    overflow-x: hidden; background-image: url(../img/bb.svggg); background-attachment: fixed; margin-bottom: 5px;
     
 }
 
 /* Стили для блоков */
 .block {
-    height: 100dvh; overflow-y: hidden;
+    height: 104dvh; overflow-y: hidden;
    
 background-image: url(../img/b.svg); background-position: center; background-size: cover; 
  
-    width: 83dvw;
+    width: 86dvw;
     background-color: rgba(0, 0, 0, 0.3);
 
-    border: 0.25dvw solid rgb(80, 18, 18);
+    border: 0.05dvw ridge rgb(173, 172, 172);
     border-radius: 2dvw;
     scroll-snap-align: start;
     text-align: center;
@@ -125,9 +125,9 @@ background-image: url(../img/b.svg); background-position: center; background-siz
     justify-content: space-evenly;
     overflow-x: hidden;
    transform: scale(0.92) translateY(2dvh );
-    box-shadow: -32px 10px 0px 0px rgba(35, 3, 3, 0.673);
-    margin-bottom: 5dvw;
-    margin-left: 1dvw; margin-top: -1.7%; transition: transform 0.3s ease,  border 0.3s  ease; 
+   
+    
+    margin-left: 0;  transition: transform 0.3s ease,  border 0.3s  ease; padding-right: -9dvw; margin-bottom: 10dvw;
 }
 
 
@@ -160,13 +160,9 @@ background-image: url(../img/b.svg); background-position: center; background-siz
     font-weight: 600;
     line-height: 1;
     margin: 0;
-    color: rgb(177, 35, 35);
+    color: rgb(135, 19, 19);
     
- text-shadow:  -5px 5px 0px rgba(125, 26, 26, 0.334),
-
-                 -7.5px 7.5px 0px rgba(86, 17, 17, 0.23),
-
-                 -10px 10px 15px rgba(30, 4, 4, 0.778);
+ 
 
 
 filter: brightness(1.3);
@@ -215,7 +211,8 @@ a {
     background-color: rgba(253, 3, 3, 0.495);
     border-radius: 25px;
     align-items: center;
-    align-content: center;
+    align-content: center; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/sad.jpg); background-position: bottom;
     
     
 }
@@ -504,7 +501,7 @@ justify-content: space-around; text-align: center;  align-content: center; font-
 
 .contact {width: 20dvw; flex-direction: column-reverse;}
 
-input {border-radius: 8px; border: solid; border-color: rgb(191, 29, 29);border-width: 0; border-bottom-width: 0.55dvw; background-color: rgba(0, 0, 0, 0.695); color: rgb(177, 35, 35); font-size: 1.3dvw; padding: 0.4dvw;}
+input {border-radius: 8px; border: solid; border-color: rgb(191, 29, 29);border-width: 0; border-bottom-width: 0.55dvw; background-color: rgba(0, 0, 0, 0.24); color: rgb(177, 35, 35); font-size: 1.3dvw; padding: 0.4dvw;}
 
 
 @media screen and (min-width: 2000px) {.raaa .daaa {margin-left: 0dvw;}}
@@ -819,10 +816,10 @@ input {border-radius: 8px; border: solid; border-color: rgb(191, 29, 29);border-
 .promo:hover {cursor: pointer; filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateY(-10px) translateX(20px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)  
 }
 input:hover, input:focus { filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(10px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)}
-.send:hover {cursor: pointer; filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(20px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)}
+.send:hover {cursor: pointer; filter: brightness(1.3); transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s; transform: scale(1.1) translateX(10px);border-radius: 1dvw; box-shadow: -10.5px 4px 0px 0px rgba(97, 5, 5, 0.848)}
 .big {width: 34dvw; height: auto; align-content: center ; display: flex; }
 .big::placeholder {background-color: #00000007; font-size: 2dvw;  margin-top: 1.5dvw; text-align: center; color: rgba(113, 22, 22, 0.668); font-weight: 300;} 
-.arrow {position: absolute; color: rgba(255, 255, 255, 0.711); font-size: 2.5dvw; right: 12dvw; background-color: rgba(255, 255, 255, 0); font-weight: 600; border: none;}
+.arrow {position: absolute; color: rgba(255, 255, 255, 0.711); font-size: 2dvw; right: 12dvw; background-color: rgba(255, 255, 255, 0); font-weight: 600; border: none; position: absolute; contain: layout; margin-top: -3dvw; margin-bottom: 5dvw;}
 .arrow:hover {scale: 1.1; color: white; transition: ease 0.1s; }
 .adi .title-b {font-size: 8dvw; margin-top: 14.5dvw;   position: absolute; contain: layout;}
 
@@ -832,3 +829,5 @@ input:hover, input:focus { filter: brightness(1.3); transition: transform 0.3s, 
 .citat {padding: 3dvw; margin-top: 1dvw;}
 .author {position: absolute; contain: layout; right: 12dvw; margin-top: 15dvw; font-family: 'Nunito'; color: rgba(255, 255, 255, 0.677); }
 .motto {margin-top: -35dvw; margin-left: -40dvw; position: absolute; contain: layout;  }
+.block[data-index="6"] {
+    height: 40%; background-color: rgb(0, 0, 0); align-content: flex-start;  z-index: -100; padding: 0.5dvw; margin-bottom: 1dvw; border-radius: 0.3dvw; background-image: none; flex-wrap: nowrap; align-items: center; align-content: center; justify-content: center;margin-top: -1dvw; padding-left: -10dvw; border-color: rgba(177, 35, 35, 0);}
