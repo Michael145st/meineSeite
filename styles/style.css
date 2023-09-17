@@ -112,7 +112,7 @@ background-image: url(../img/b.svg); background-position: center; background-siz
     width: 80dvw;
     background-color: rgba(0, 0, 0, 0.3);
 
-    border: 0.5dvw solid rgb(80, 18, 18);
+    border: 0.25dvw solid rgb(80, 18, 18);
     border-radius: 2dvw;
     scroll-snap-align: start;
     text-align: center;
